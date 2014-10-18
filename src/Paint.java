@@ -12,10 +12,11 @@ public class Paint extends Applet {
     public Polygon polygon = new Polygon(edgeNumber);
     public OurSquare zona = new OurSquare();
     private Point center;
-//    Scanner sc = new Scanner(System.in);
+
+    //    Scanner sc = new Scanner(System.in);
 
     public void paint(Graphics g) {
-        setSize(new Dimension(500, 500));
+//        setSize(new Dimension(500, 500));
         center = new Point(getWidth() / 2, getHeight() / 2);
 //        g.drawOval(center.getX() - radius, center.getY() - radius, radius * 2, radius * 2);
         for (int i = 0; i < edgeNumber; i++) {
@@ -43,5 +44,10 @@ public class Paint extends Applet {
         zona.addPointsForDraw(center);
         g.drawPolygon(zona.getXArray(), zona.getYArray(), zona.EDGE);
         polygon.areaPolygon(polygon);
+    }
+
+    public static void main(String[] args) {
+        Paint p = new Paint();
+        p.setSize(new Dimension(1000, 1000));
     }
 }

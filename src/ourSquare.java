@@ -4,11 +4,11 @@ import java.util.List;
 /**
  * Created by EduardP on 18.10.14.
  */
-public class ourSquare extends Polygon{
+public class OurSquare extends Polygon {
     private List<Point> points = new ArrayList<Point>();
-    int m = 0;
-    int n = 0;
-    int edgeNumber = 4;
+    private int m = 0;
+    private int n = 0;
+    public final int EDGE = 4;
 
     public void setM(int m) {
         this.m = m;
@@ -27,24 +27,24 @@ public class ourSquare extends Polygon{
     }
 
     public int[] getXArray() {
-        int[] a = new int[edgeNumber];
+        int[] a = new int[EDGE];
         int i = 0;
-        for(Point p: points) {
+        for (Point p : points) {
             a[i] = p.getX();
             i++;
-            if (i == edgeNumber)
+            if (i == EDGE)
                 break;
         }
         return a;
     }
 
     public int[] getYArray() {
-        int[] a = new int[edgeNumber];
+        int[] a = new int[EDGE];
         int i = 0;
-        for(Point p: points) {
+        for (Point p : points) {
             a[i] = p.getY();
             i++;
-            if (i == edgeNumber)
+            if (i == EDGE)
                 break;
         }
         return a;
@@ -58,7 +58,11 @@ public class ourSquare extends Polygon{
         this.points = points;
     }
 
-    public int getEdgeNumber() {
-        return edgeNumber;
+    public void addPointsForDraw(Point center) {
+        points.add(new Point(center.getX() + (m / 2) * -1, center.getY() + (n / 2) * 1));
+        points.add(new Point(center.getX() + (m / 2) * -1, center.getY() + (n / 2) * -1));
+        points.add(new Point(center.getX() + (m / 2) * 1, center.getY() + (n / 2) * -1));
+        points.add(new Point(center.getX() + (m / 2) * 1, center.getY() + (n / 2) * 1));
     }
+
 }
