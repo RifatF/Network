@@ -1,7 +1,14 @@
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Rigen on 18.10.14.
  */
 public class Point {
+
+    private List<Point> points = new ArrayList<Point>();
+    private int edgeNumber;
+
     private int x;
     private int y;
 
