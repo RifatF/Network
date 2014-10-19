@@ -15,15 +15,14 @@ import SemesterWork.Polygon;
 public class Trigon extends Applet {
 
     public final int edgeNumber = 3;
-    public int radius = 15;
+    public int radius = 50;
     double angle = 0;
     public Polygon polygon = new Polygon(edgeNumber);
-    public OurSquare zona = new OurSquare();
     Scanner sc = new Scanner(System.in);
     int m = sc.nextInt();
     int n = sc.nextInt();
-
-
+    public OurSquare zona = new OurSquare(m, n);
+    
 
     public void paint(Graphics g) {
 //        setSize(new Dimension(1366, 768));

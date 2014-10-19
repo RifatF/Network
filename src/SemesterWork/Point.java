@@ -1,7 +1,5 @@
-<<<<<<< HEAD:src/SemesterWork/Point.java
 package SemesterWork;
-=======
->>>>>>> bc1f97ac4c55e430d686642cd9c696eec5b2c810:src/Point.java
+
 import java.util.ArrayList;
 import java.util.List;
 

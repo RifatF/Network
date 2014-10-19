@@ -1,4 +1,5 @@
 package SemesterWork;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,9 +14,14 @@ public class OurSquare extends Polygon {
     int downBorder = 0;
 
     private List<Point> points = new ArrayList<Point>();
-    private int m = 0;
-    private int n = 0;
+    private int m;
+    private int n;
     public final int EDGE = 4;
+
+    public OurSquare(int m, int n) {
+        this.m = m;
+        this.n = n;
+    }
 
     public void setM(int m) {
         this.m = m;
@@ -71,21 +77,24 @@ public class OurSquare extends Polygon {
         points.add(new Point(center.getX() + (m / 2) * 1, center.getY() + (n / 2) * -1));
         points.add(new Point(center.getX() + (m / 2) * 1, center.getY() + (n / 2) * 1));
 
-        rightBorder = center.getX() + getM()/2;
-        leftBorder = center.getX() - getM()/2;
-        upBorder = center.getY() - getN()/2;
-        downBorder = center.getY() + getN()/2;
+        rightBorder = center.getX() + getM() / 2;
+        leftBorder = center.getX() - getM() / 2;
+        upBorder = center.getY() - getN() / 2;
+        downBorder = center.getY() + getN() / 2;
     }
 
     public int getRightBorder() {
         return rightBorder;
     }
+
     public int getLeftBorder() {
         return leftBorder;
     }
+
     public int getUpBorder() {
         return upBorder;
     }
+
     public int getDownBorder() {
         return downBorder;
     }
