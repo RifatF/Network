@@ -13,6 +13,9 @@ public class Paint extends Applet {
     public Polygon polygon = new Polygon(edgeNumber);
     public OurSquare zona = new OurSquare();
     Scanner sc = new Scanner(System.in);
+    int m = sc.nextInt();
+    int n = sc.nextInt();
+
 
 
     public void paint(Graphics g) {
@@ -27,18 +30,6 @@ public class Paint extends Applet {
         }
         g.drawPolygon(polygon.getXArray(), polygon.getYArray(), polygon.getEdgeNumber());
 
-
-//        angle = 180;
-//        radius = 22;
-//        zona.setM(sc.nextInt());
-//        zona.setN(sc.nextInt());
-//        zona.setM(450);
-//        zona.setN(350);
-//        for (int i = 0; i < 4; i++) {
-//            zona.getPoints().add(new Point((int)(center.getX() + ((zona.getN())/2) + (radius * Math.cos(angle * (Math.PI)/180))), (int)(center.getY() + (zona.getM()/2) + radius * Math.sin(angle * (Math.PI)/180))));
-//            angle = angle + 360/4;
-//        }
-//        g.drawPolygon(zona.getXArray(), zona.getYArray(), 4);
 
         zona.setM(sc.nextInt());
         zona.setN(sc.nextInt());
@@ -75,9 +66,4 @@ public class Paint extends Applet {
         }
     }
 
-
-    public static void main(String[] args) {
-//        Paint p = new Paint();
-//        p.setSize(new Dimension(1000, 1000));
-    }
 }
