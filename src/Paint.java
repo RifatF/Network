@@ -39,10 +39,4 @@ public class Paint extends Applet {
         g.drawPolygon(polygon.getXArray(), polygon.getYArray(), polygon.getEdgeNumber());
         polygon.areaPolygon(polygon);
     }
-
-    public static void main(String[] args) {
-//    	Scanner sc = new Scanner(System.in);
-//        Paint p = new Paint();
-//        p.setSize(new Dimension(sc.nextInt(), sc.nextInt()));
-    }
 }
