@@ -1,12 +1,12 @@
 package SemesterWork.Polygons;
 
+import SemesterWork.OurSquare;
+import SemesterWork.Point;
+import SemesterWork.Polygon;
+
 import java.applet.Applet;
 import java.awt.*;
 import java.util.Scanner;
-
-import SemesterWork.*;
-import SemesterWork.Point;
-import SemesterWork.Polygon;
 
 
 /**
@@ -15,14 +15,14 @@ import SemesterWork.Polygon;
 public class Trigon extends Applet {
 
     public final int edgeNumber = 3;
-    public int radius = 50;
+    public int radius = 30;
     double angle = 0;
     public Polygon polygon = new Polygon(edgeNumber);
     Scanner sc = new Scanner(System.in);
-    int m = sc.nextInt();
-    int n = sc.nextInt();
-    public OurSquare zona = new OurSquare(m, n);
-    
+    //int m = sc.nextInt();
+    //int n = sc.nextInt();
+    public OurSquare zona = new OurSquare(500, 500);
+
 
     public void paint(Graphics g) {
 //        setSize(new Dimension(1366, 768));
@@ -37,16 +37,10 @@ public class Trigon extends Applet {
 //        g.drawPolygon(polygon.getXArray(), polygon.getYArray(), polygon.getEdgeNumber());
 
 
-        zona.setM(m);
-        zona.setN(n);
+//        zona.setM(m);
+//        zona.setN(n);
         zona.addPointsForDraw(center);
         g.drawPolygon(zona.getXArray(), zona.getYArray(), zona.EDGE);
-        //polygon.areaPolygon(polygon);
-
-//        System.out.println("Right border " + zona.getRightBorder());
-//        System.out.println("Left border " + zona.getLeftBorder());
-//        System.out.println("Up border " + zona.getUpBorder());
-//        System.out.println("Down border " + zona.getDownBorder());
 
         int x1 = polygon.getPoints().get(0).getX();
         int x2 = polygon.getPoints().get(1).getX();

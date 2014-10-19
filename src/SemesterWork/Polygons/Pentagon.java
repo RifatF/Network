@@ -40,8 +40,27 @@ public class Pentagon extends Applet {
 
         int somethingHeight = (int) (edgeSize * Math.sin(360 / EDGE * (Math.PI) / 180));
 
+        Polygon pentagon = new Polygon(EDGE);
+        for (int i = 0; i < EDGE; i++) {
+            pentagon.getPoints().add(new Point((int) (tempCenter.getX() + radius * Math.cos(angle * (Math.PI) / 180)),
+                    (int) (tempCenter.getY() + radius * Math.sin(angle * (Math.PI) / 180))));
+            angle = angle + 360 / EDGE;
+        }
+
+        g.drawPolygon(pentagon.getXArray(), pentagon.getYArray(), EDGE);
+        tempCenter.setY(tempCenter.getY() + 2 * radius + 2 * somethingHeight);
+
         while ((zona.getDownBorder() - tempCenter.getY()) > -radius) {
-            Polygon pentagon = new Polygon(EDGE);
+            angle = -90;
+            pentagon = new Polygon(EDGE);
+            for (int i = 0; i < EDGE; i++) {
+                pentagon.getPoints().add(new Point((int) (tempCenter.getX() + radius * Math.cos(angle * (Math.PI) / 180)),
+                        (int) (tempCenter.getY() + radius * Math.sin(angle * (Math.PI) / 180))));
+                angle = angle + 360 / EDGE;
+            }
+            angle = 90;
+
+            pentagon = new Polygon(EDGE);
             for (int i = 0; i < EDGE; i++) {
                 pentagon.getPoints().add(new Point((int) (tempCenter.getX() + radius * Math.cos(angle * (Math.PI) / 180)),
                         (int) (tempCenter.getY() + radius * Math.sin(angle * (Math.PI) / 180))));
