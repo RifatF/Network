@@ -46,8 +46,4 @@ public class Paint extends Applet {
         polygon.areaPolygon(polygon);
     }
 
-    public static void main(String[] args) {
-//        Paint p = new Paint();
-//        p.setSize(new Dimension(1000, 1000));
-    }
 }
