@@ -5,6 +5,12 @@ import java.util.List;
  * Created by EduardP on 18.10.14.
  */
 public class OurSquare extends Polygon {
+
+    int rightBorder = 0;
+    int leftBorder = 0;
+    int upBorder = 0;
+    int downBorder = 0;
+
     private List<Point> points = new ArrayList<Point>();
     private int m = 0;
     private int n = 0;
@@ -63,6 +69,24 @@ public class OurSquare extends Polygon {
         points.add(new Point(center.getX() + (m / 2) * -1, center.getY() + (n / 2) * -1));
         points.add(new Point(center.getX() + (m / 2) * 1, center.getY() + (n / 2) * -1));
         points.add(new Point(center.getX() + (m / 2) * 1, center.getY() + (n / 2) * 1));
+
+        rightBorder = center.getX() + getM()/2;
+        leftBorder = center.getX() - getM()/2;
+        upBorder = center.getY() - getN()/2;
+        downBorder = center.getY() + getN()/2;
+    }
+
+    public int getRightBorder() {
+        return rightBorder;
+    }
+    public int getLeftBorder() {
+        return leftBorder;
+    }
+    public int getUpBorder() {
+        return upBorder;
+    }
+    public int getDownBorder() {
+        return downBorder;
     }
 
 }
