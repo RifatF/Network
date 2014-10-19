@@ -6,5 +6,9 @@
 
 /*.iml
 
+/.classpath
+
+/.project
+
 database.properties
 .DS_Store
