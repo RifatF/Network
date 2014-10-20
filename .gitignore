@@ -10,5 +10,9 @@
 
 /.project
 
+/.settings
+
+/.gitignore
+
 database.properties
 .DS_Store
